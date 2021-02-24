@@ -1,4 +1,4 @@
-# Documentation
+# Build Object Remover
 
 The **Build Object Remover** allow you to automatically remove a chosen object from a scene from a release build.
 
@@ -47,7 +47,7 @@ Press `Revert` button to discard currently unsaved changes.<br/>
 
 Changes that are not applied before build will not take effect!
 
-### Debug
+## Debug
 Tags marked to remove will be listed in log in console after building process.
 ![Add and remove](LogScreenshot.png)
 

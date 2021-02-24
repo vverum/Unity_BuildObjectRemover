@@ -17,8 +17,7 @@ namespace Vverum.Tools.BuildObjectRemover
 
 		public void OnPreprocessBuild(BuildReport report)
 		{
-			var buildType = GetBuildType(report);
-			var settings = BuildObjectRemoverSettingsProvider.LoadSettings().Where(x => x.enable && x.buildTarget == report.summary.platform && ((RemoverState)x.runType).HasFlag(buildType));
+			var settings = GetTagsToRemove(report);
 			var logMessage = new StringBuilder();
 			logMessage.Append("Removing object with tags: ");
 			foreach (var item in settings)
@@ -31,17 +30,26 @@ namespace Vverum.Tools.BuildObjectRemover
 
 		public void OnProcessScene(Scene scene, BuildReport report)
 		{
-			var buildType = GetBuildType(report);
-			var buildTarget = GetBuildTarget(report);
-
-			var settings = BuildObjectRemoverSettingsProvider.LoadSettings().Where(x => x.enable && ((RemoverState)x.runType).HasFlag(buildType)).Where(x => x.buildTarget == buildTarget || x.buildTarget == BuildTarget.NoTarget);
-
+			var settings = GetTagsToRemove(report);
 			foreach (var item in settings)
 			{
 				//TODO: choose better method of removing objs
 				//RemoveObjectWithTagInScene(scene, item.tag);
 				RemoveChildObjectWithTagOptymize(item.tag);
 			}
+		}
+
+		private IEnumerable<RemoveTagData> GetTagsToRemove(BuildReport report)
+		{
+			var buildType = GetBuildType(report);
+			var buildTarget = GetBuildTarget(report);
+			var tagsToRemove = BuildObjectRemoverSettingsProvider.LoadSettings()
+				.Where(x => x.enable
+					&& ((RemoverState)x.runType).HasFlag(buildType)
+					&& x.buildTarget == buildTarget || x.buildTarget == BuildTarget.NoTarget)
+				.GroupBy(x => x.tag)
+				.Select(x => x.First());
+			return tagsToRemove;
 		}
 
 		private RemoverState GetBuildType(BuildReport report)
