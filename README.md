@@ -9,6 +9,16 @@ By default Unity Editor removes objects with tag 'EditorOnly' from build and run
 
 ![Tool view in editor][ViewImage]
 
+## Installation
+
+1. Copy https link to this repository<br/>
+https://github.com/vverum/Unity_BuildObjectRemover.git
+2. Open package manager in unity 
+3. Press Add button (+ in the upper left corner) and select `Add package from git URL...`
+4. Paste link and press `add`
+
+### Soon available through asset store :)
+
 ## Setup **Build Object Remover**
 
 **Build Object Remover** view is located in ***Project Settings***
