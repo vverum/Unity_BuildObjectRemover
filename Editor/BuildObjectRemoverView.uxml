@@ -1,0 +1,38 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement>
+        <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" show-vertical-scroller="false">
+            <ui:VisualElement name="container">
+                <ui:VisualElement name="allBuildTarget" style="margin-top: 3px; margin-bottom: 5px; flex-grow: 1; flex-shrink: 0;">
+                    <ui:Label text="AllBuilds" display-tooltip-when-elided="true" name="buildTarget" style="font-size: 18px; -unity-font-style: bold;" />
+                    <ui:VisualElement style="flex-direction: row; margin-left: 10px;">
+                        <ui:Label text="Enable" display-tooltip-when-elided="True" />
+                        <ui:Label text="Tag" display-tooltip-when-elided="True" style="min-width: 140px; -unity-text-align: upper-center; margin-left: 5px; margin-right: 5px;" />
+                        <ui:Label text="Remove from build types" display-tooltip-when-elided="True" style="min-width: 145px; -unity-text-align: upper-center; margin-right: 0; margin-left: 15px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="contentTags" style="margin-left: 10px;">
+                        <ui:VisualElement name="editorOnlyRow" class="tagRow" style="flex-direction: row; justify-content: flex-start; flex-shrink: 1; width: auto; padding-left: 10px; min-width: 400px; padding-right: 10px; flex-grow: 0;">
+                            <ui:Toggle name="removeEnable" value="true" focusable="false" style="margin-left: 5px; margin-right: 15px; margin-top: 4px;" />
+                            <uie:TagField name="tag" value="EditorOnly" focusable="false" style="min-width: 140px; flex-grow: 0; flex-basis: auto; margin-left: 5px; margin-right: 5px; width: auto;" />
+                            <uie:EnumFlagsField name="buildType" value="no" style="min-width: 140px; flex-basis: auto; margin-left: 15px; margin-right: 6px; flex-grow: 0;" />
+                            <ui:Button text="-" display-tooltip-when-elided="True" name="removeButton" style="-unity-font-style: bold; margin-left: 5px; visibility: visible; display: flex; min-width: 24px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="padding-left: 10px; padding-right: 10px; margin-top: 2px; justify-content: flex-start; flex-direction: row;">
+                        <ui:Button text="+" display-tooltip-when-elided="true" name="AddTagButton" style="-unity-font-style: bold; min-width: 24px; margin-left: 0;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:ScrollView>
+        <ui:VisualElement style="width: 100%; align-items: center; margin-top: 4px; flex-shrink: 0;">
+            <ui:Button text="Add Platform" display-tooltip-when-elided="True" name="addBuildTargetButton" style="width: 200px;" />
+            <ui:VisualElement name="addBuildTargetSelector" style="flex-direction: row; display: none;">
+                <uie:EnumField value="Center" name="selectedBuildTarget" style="width: 130px;" />
+                <ui:Button text="Add Platform" display-tooltip-when-elided="true" name="AddSelectedBuildTarget" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="optionsSave" style="flex-direction: row-reverse; flex-shrink: 0; flex-grow: 1; width: 100%; margin-top: 4px; margin-bottom: 1px;">
+            <ui:Button text="Apply" display-tooltip-when-elided="True" name="applyButton" />
+            <ui:Button text="Revert" display-tooltip-when-elided="True" name="revertButton" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,8 @@
+﻿<UXML xmlns="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+	<VisualElement class="tagRow" style="flex-direction: row; justify-content: flex-start; flex-shrink: 1; width: auto; margin-top: 2px; padding-left: 10px; min-width: 400px; padding-right: 10px; flex-grow: 0;">
+		<Toggle name="removeEnable" binding-path="enable" style="margin-left: 5px; margin-right: 15px; margin-top: 4px;" />
+		<uie:TagField name="tag" value="Untagged" binding-path="tag" style="min-width: 140px; flex-grow: 0; flex-basis: auto; margin-left: 5px; margin-right: 5px; width: auto;" />
+		<uie:EnumFlagsField name="buildType" binding-path="runType" style="min-width: 140px; flex-basis: auto; margin-left: 15px; margin-right: 6px; flex-grow: 0;" />
+		<Button text="-" display-tooltip-when-elided="True" name="removeButton" style="-unity-font-style: bold; margin-left: 5px; min-width: 24px;" />
+	</VisualElement>
+</UXML>

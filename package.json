@@ -1,0 +1,16 @@
+{
+  "name": "com.vverum.buildobjectremover",
+  "displayName": "BuildObjectRemover",
+  "version": "1.0.0",
+  "unity": "2019.4",
+  "description": "Remove every development object on scene from releas build.",
+  "type": "tool",
+  "unityRelease": "0f1",
+  "dependencies": {
+    "com.unity.settings-manager": "1.0.3"
+  },
+  "author": {
+    "name": "Dawid Sobala",
+    "email": "vverum.com@gmail.com"
+  }
+}
