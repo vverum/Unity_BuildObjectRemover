@@ -1,6 +1,6 @@
 {
   "name": "com.vverum.buildobjectremover",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "BuildObjectRemover",
   "description": "Remove chosen object on scene from releas build.",
   "unity": "2019.4",
