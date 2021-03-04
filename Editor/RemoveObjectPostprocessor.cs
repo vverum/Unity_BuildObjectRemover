@@ -39,16 +39,16 @@ namespace Vverum.Tools.BuildObjectRemover
 			}
 		}
 
-		private IEnumerable<RemoveTagData> GetTagsToRemove(BuildReport report)
+		private List<RemoveTagData> GetTagsToRemove(BuildReport report)
 		{
 			var buildType = GetBuildType(report);
 			var buildTarget = GetBuildTarget(report);
 			var tagsToRemove = BuildObjectRemoverSettingsProvider.LoadSettings()
-				.Where(x => x.enable
+				.Where(x => (x.enable
 					&& ((RemoverState)x.runType).HasFlag(buildType)
-					&& x.buildTarget == buildTarget || x.buildTarget == BuildTarget.NoTarget)
+					&& (x.buildTarget == buildTarget || x.buildTarget == BuildTarget.NoTarget)))
 				.GroupBy(x => x.tag)
-				.Select(x => x.First());
+				.Select(x => x.First()).ToList();
 			return tagsToRemove;
 		}
 
@@ -58,7 +58,7 @@ namespace Vverum.Tools.BuildObjectRemover
 			{
 				return RemoverState.EditorPlayTime;
 			}
-			return (report.summary.options.HasFlag(UnityEditor.BuildOptions.Development)) ? RemoverState.Development : RemoverState.Release;
+			return (report.summary.options.HasFlag(BuildOptions.Development)) ? RemoverState.Development : RemoverState.Release;
 		}
 
 		private BuildTarget GetBuildTarget(BuildReport report)
