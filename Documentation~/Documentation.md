@@ -1,6 +1,6 @@
 # Documentation
 
-The **Build Object Remover** allow you to automatically remove a chosen object from a scene from a release build.
+The **Build Object Remover** allow you to automatically remove object with selected tag from scenes from a build.
 
 ## Overview
 
@@ -15,7 +15,7 @@ By default Unity Editor removes objects with tag 'EditorOnly' from build and run
 
 ### Adding and removing tags<br/>
 1. Adding and removing tags is as simple as pressing the appropriate button.
-![Add and remove](AddRemoveTagScreenshot.png)
+![Add and remove][AddRemoveImage]
 2. Select correct tag from drop-down list with tags in new created row.
 3. Enable the row with selected tag.
 4. Select correct build type.
@@ -24,7 +24,7 @@ By default Unity Editor removes objects with tag 'EditorOnly' from build and run
 ### Seting build type
 In `Remove from build types` you are selecting the type of build when the object will be removed.
 
-![Add and remove][AddRemoveImage]
+![Add and remove][BuildTypeImage]
 * Nothing - does not remove from any runtime or build
 * Everything - remove from any runtime or build
 * Editor Play Time - remove from play time in editor 
@@ -59,5 +59,6 @@ This project's license is available in the provided "[LICENSE.md](../LICENSE.md)
 
 
 [ViewImage]: BuildObjRemoverScreenshot.png?raw=true "Tool view in editor"
-[AddRemoveImage]: BuildTypeScreenshot.png
+[AddRemoveImage]: AddRemoveTagScreenshot.png
+[BuildTypeImage]: BuildTypeScreenshot.png
 [BuildLogImage]: LogScreenshot.png
