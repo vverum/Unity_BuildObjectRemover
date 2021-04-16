@@ -11,13 +11,23 @@ By default Unity Editor removes objects with tag 'EditorOnly' from build and run
 
 ## Installation
 
+### Via Package manager as gitURL
 1. Copy https link to this repository<br/>
 https://github.com/vverum/Unity_BuildObjectRemover.git
 2. Open package manager in unity 
 3. Press Add button (+ in the upper left corner) and select `Add package from git URL...`
 4. Paste link and press `add`
 
-### Soon available through asset store :)
+### Via Package manager as local file
+1. Download package (tgz file) from [releases](https://github.com/vverum/Unity_BuildObjectRemover/releases)
+2. Move file to project location
+3. Open package manager in unity 
+4. Press Add button (+ in the upper left corner) and select `Add package from tarball...`
+5. Select package file
+
+### Unity Asset Store
+1. install normally like any unity asset from
+[Unity Asset Store][AssetStoreLink]
 
 ## Setup **Build Object Remover**
 
@@ -62,7 +72,7 @@ Tags marked to remove will be listed in log in console after building process.
 ![Add and remove][BuildLogImage]
 
 ## This tool is Open Sourced
-[github.com/vverum/Unity_BuildObjectRemover](https://github.com/vverum/Unity_BuildObjectRemover)
+[github.com/vverum/Unity_BuildObjectRemover][GitRepoLink]
 
 ## LICENSE: Modified MIT License (MIT)
 This project's license is available in the provided "[LICENSE.md](LICENSE.md)" file.
@@ -72,3 +82,5 @@ This project's license is available in the provided "[LICENSE.md](LICENSE.md)" f
 [AddRemoveImage]: Documentation~/AddRemoveTagScreenshot.png
 [BuildTypeImage]: Documentation~/BuildTypeScreenshot.png
 [BuildLogImage]: Documentation~/LogScreenshot.png
+[GitRepoLink]: https://github.com/vverum/Unity_BuildObjectRemover
+[AssetStoreLink]: https://assetstore.unity.com/packages/tools/utilities/build-object-remover-185552
