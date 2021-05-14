@@ -11,6 +11,8 @@ By default Unity Editor removes objects with tag 'EditorOnly' from build and run
 
 ## Installation
 
+### Latest steps available at [Unity manual][UnityUPMInstall]
+
 ### Via Package manager as gitURL
 1. Copy https link to this repository<br/>
 https://github.com/vverum/Unity_BuildObjectRemover.git
@@ -84,3 +86,4 @@ This project's license is available in the provided "[LICENSE.md](LICENSE.md)" f
 [BuildLogImage]: Documentation~/LogScreenshot.png
 [GitRepoLink]: https://github.com/vverum/Unity_BuildObjectRemover
 [AssetStoreLink]: https://assetstore.unity.com/packages/tools/utilities/build-object-remover-185552
+[UnityUPMInstall]: https://docs.unity3d.com/Manual/upm-ui-giturl.html
