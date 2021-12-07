@@ -6,7 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [1.0.2] - 2021-12-07
 
-### Improve package manifest *\<BuildObjectRemover\>*.
+### Add default tag *\<BuildObjectRemover\>*.
+- Add default tag "DevelopmentOnly" when opening the tool for the first time
 - Improve package description
 - remove old manifest
 
