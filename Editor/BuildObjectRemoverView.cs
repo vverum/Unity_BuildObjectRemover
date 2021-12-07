@@ -42,13 +42,15 @@ namespace Vverum.Tools.BuildObjectRemover
 			rowTemplate = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(BuildObjectRemoverConstants.PACKAGE_PATH + "/SettingsTagViewTemplate.uxml");
 
 			SetupView(rootElement);
-			FillViewContent();
 
-			base.OnActivate(searchContext, rootElement);
 			if (!BuildObjectRemoverSettingsProvider.HasSettings())
 			{
 				AddDefaultTag();
 			}
+
+			FillViewContent();
+
+			base.OnActivate(searchContext, rootElement);
 		}
 
 		public override void OnDeactivate()
@@ -180,11 +182,19 @@ namespace Vverum.Tools.BuildObjectRemover
 
 		private void AddDefaultTag()
 		{
-			string sampleTag = "DevelopmentOnly";
-			if (!UnityEditorInternal.InternalEditorUtility.tags.Contains(sampleTag))
+			string defaultTag = "DevelopmentOnly";
+
+			if (!UnityEditorInternal.InternalEditorUtility.tags.Contains(defaultTag))
+				UnityEditorInternal.InternalEditorUtility.AddTag(defaultTag);
+
+			var defaultRemove = new RemoveTagData
 			{
-				UnityEditorInternal.InternalEditorUtility.AddTag(sampleTag);
-			}
+				buildTarget = BuildTarget.NoTarget,
+				enable = true,
+				runType = (int)RemoverState.Release,
+				tag = defaultTag
+			};
+			BuildObjectRemoverSettingsProvider.SaveSettings(new List<RemoveTagData>() { defaultRemove });
 		}
 
 	}
