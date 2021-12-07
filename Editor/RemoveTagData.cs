@@ -7,7 +7,7 @@ using UnityEngine;
 namespace Vverum.Tools.BuildObjectRemover
 {
 	[Serializable]
-	public class RemoveTagData
+	internal class RemoveTagData
 	{
 		public BuildTarget buildTarget = BuildTarget.NoTarget;
 		public bool enable;

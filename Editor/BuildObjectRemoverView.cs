@@ -45,6 +45,10 @@ namespace Vverum.Tools.BuildObjectRemover
 			FillViewContent();
 
 			base.OnActivate(searchContext, rootElement);
+			if (!BuildObjectRemoverSettingsProvider.HasSettings())
+			{
+				AddDefaultTag();
+			}
 		}
 
 		public override void OnDeactivate()
@@ -172,6 +176,15 @@ namespace Vverum.Tools.BuildObjectRemover
 			rowsData.Clear();
 			SetupView(rootVisualElement);
 			FillViewContent();
+		}
+
+		private void AddDefaultTag()
+		{
+			string sampleTag = "DevelopmentOnly";
+			if (!UnityEditorInternal.InternalEditorUtility.tags.Contains(sampleTag))
+			{
+				UnityEditorInternal.InternalEditorUtility.AddTag(sampleTag);
+			}
 		}
 
 	}
