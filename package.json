@@ -1,16 +1,38 @@
 {
   "name": "com.vverum.buildobjectremover",
   "displayName": "BuildObjectRemover",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "unity": "2019.4",
-  "description": "Remove chosen object on scene from releas build.",
-  "type": "tool",
   "unityRelease": "0f1",
+  "description": "BuildObjectRemover allow you to add more tags that will be removed from selected platforms and build types.",
+  "type": "tool",
   "dependencies": {
     "com.unity.settings-manager": "1.0.3"
   },
   "author": {
     "name": "Dawid Sobala",
-    "email": "vverum.com@gmail.com"
-  }
+    "email": "vverum.com@gmail.com",
+    "url": "https://github.com/vverum"
+  },
+  "keywords": [
+    "remove",
+    "development",
+    "only",
+    "tag"
+  ],
+  "files": [
+    "/CHANGELOG.md",
+    "/CHANGELOG.md.meta",
+    "/LICENSE.md",
+    "/LICENSE.md.meta",
+    "/package.json",
+    "/package.json.meta",
+    "/README.md",
+    "/README.md.meta",
+    "/Third Party Notices.md",
+    "/Third Party Notices.md.meta",
+    "/Editor",
+    "/Editor.meta",
+    "/Documentation~"
+  ]
 }
