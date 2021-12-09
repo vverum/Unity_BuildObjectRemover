@@ -7,7 +7,7 @@
   "description": "BuildObjectRemover allow you to add more tags that will be removed from selected platforms and build types.",
   "type": "tool",
   "dependencies": {
-    "com.unity.settings-manager": "1.0.3"
+    "com.unity.settings-manager": "2.0.1"
   },
   "author": {
     "name": "Dawid Sobala",
