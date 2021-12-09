@@ -9,6 +9,11 @@ By default Unity Editor removes objects with tag 'EditorOnly' from build and run
 
 ![Tool view in editor][ViewImage]
 
+## Requirements
+
+Package dependencies:
+* com.unity.settings-manager #2.0.1
+
 ## Setup **Build Object Remover**
 
 **Build Object Remover** view is located in ***Project Settings***

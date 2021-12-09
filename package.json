@@ -1,7 +1,7 @@
 {
   "name": "com.vverum.buildobjectremover",
   "displayName": "BuildObjectRemover",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "unity": "2019.4",
   "unityRelease": "0f1",
   "description": "BuildObjectRemover allow you to add more tags that will be removed from selected platforms and build types.",

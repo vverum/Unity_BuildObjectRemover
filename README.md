@@ -31,6 +31,11 @@ https://github.com/vverum/Unity_BuildObjectRemover.git
 1. install normally like any unity asset from
 [Unity Asset Store][AssetStoreLink]
 
+## Requirements
+
+Package dependencies:
+* com.unity.settings-manager #2.0.1
+
 ## Setup **Build Object Remover**
 
 **Build Object Remover** view is located in ***Project Settings***
